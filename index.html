@@ -396,14 +396,61 @@
                 q16: 'a',
                 q17: 'b'
             };
+            function checkAnswers() {
             let score = 0;
-            for (let key in answers) {
-                const selectedAnswer = document.querySelector(`input[name="${key}"]:checked`);
-                if (selectedAnswer && selectedAnswer.value === answers[key]) {
-                    score++;
+            const totalQuestions = Object.keys(correctAnswers).length;
+            
+            for (const questionId in correctAnswers) {
+                const correctAnswer = correctAnswers[questionId];
+                const questionElement = document.getElementById(questionId);
+                
+                if (Array.isArray(correctAnswer)) {
+                    // Обработка вопросов с множественным выбором
+                    const selected = [];
+                    document.querySelectorAll(`#${questionId} input[type="checkbox"]:checked`).forEach(el => {
+                        selected.push(el.value);
+                    });
+                    
+                    if (JSON.stringify(selected.sort()) === JSON.stringify(correctAnswer.sort())) {
+                        score++;
+                        questionElement.style.borderLeft = "5px solid #27ae60";
+                    } else {
+                        questionElement.style.borderLeft = "5px solid #e74c3c";
+                    }
+                } else {
+                    // Обработка вопросов с одиночным выбором
+                    const selected = document.querySelector(`#${questionId} input[name="${questionId}"]:checked`);
+                    
+                    if (selected && selected.value === correctAnswer) {
+                        score++;
+                        questionElement.style.borderLeft = "5px solid #27ae60";
+                    } else {
+                        questionElement.style.borderLeft = "5px solid #e74c3c";
+                    }
                 }
             }
-            alert(`Вы правильно ответили на ${score} из 17 вопросов.`);
+            
+            const resultElement = document.getElementById("result");
+            resultElement.style.display = "block";
+            resultElement.innerHTML = `
+                <div>Ваш результат: <span class="${score >= totalQuestions/2 ? 'correct' : 'incorrect'}">${score} из ${totalQuestions}</span></div>
+                <div>${getResultMessage(score, totalQuestions)}</div>
+            `;
+            
+            // Прокрутка к результатам
+            resultElement.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function getResultMessage(score, total) {
+            const percentage = (score / total) * 100;
+            
+            if (percentage >= 90) {
+                return "Отлично! Вы отлично разбираетесь в аксиологии!";
+            } else if (percentage >= 60) {
+                return "Хорошо! Есть небольшие пробелы, но вы близки к пониманию.";
+            } else {
+                return "Рекомендуется повторить материал по аксиологии.";
+            }
         }
     </script>
 </body>
