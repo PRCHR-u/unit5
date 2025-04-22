@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тест по антропологии</title>
+    <title>Тест по теме "Антропология"</title>
     <style>
         :root {
             --primary-color: #3498db;
@@ -13,7 +14,6 @@
             --success-color: #27ae60;
             --warning-color: #f39c12;
         }
-        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
@@ -22,13 +22,11 @@
             margin: 0;
             padding: 0;
         }
-        
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
-        
         header {
             background-color: var(--secondary-color);
             color: white;
@@ -38,19 +36,16 @@
             border-radius: 0 0 10px 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
         h1 {
             margin: 0;
             font-size: 2.2rem;
             font-weight: 700;
         }
-        
         .subtitle {
             font-size: 1.1rem;
             opacity: 0.9;
             margin-top: 0.5rem;
         }
-        
         .question {
             background-color: white;
             border-radius: 8px;
@@ -60,21 +55,18 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-left: 4px solid var(--primary-color);
         }
-        
         .question:hover {
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        
         .question-number {
             font-weight: 700;
-            color: var(--secondary-color);
+            color: black; /* Изменен цвет текста вопросов на черный */
             font-size: 1.1rem;
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
         }
-        
         .question-number:before {
             content: "Вопрос";
             display: inline-block;
@@ -85,7 +77,6 @@
             font-size: 0.8rem;
             margin-right: 0.8rem;
         }
-        
         label {
             display: block;
             padding: 0.8rem 1rem;
@@ -97,12 +88,10 @@
             position: relative;
             overflow: hidden;
         }
-        
         label:hover {
             background-color: #d6eaf8;
             transform: translateX(5px);
         }
-        
         label:after {
             content: "";
             position: absolute;
@@ -114,16 +103,13 @@
             transform: scaleY(0);
             transition: transform 0.2s ease;
         }
-        
         label:hover:after {
             transform: scaleY(1);
         }
-        
         input[type="radio"] {
             margin-right: 1rem;
             transform: scale(1.2);
         }
-        
         .btn {
             display: block;
             width: 100%;
@@ -141,18 +127,15 @@
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
         .btn:hover {
             background-color: #2980b9;
             transform: translateY(-2px);
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
         }
-        
         .btn:active {
             transform: translateY(0);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
         #result {
             display: none;
             background-color: white;
@@ -163,46 +146,37 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             animation: fadeIn 0.5s ease;
         }
-        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
-        
         .result-title {
             font-size: 1.5rem;
             color: var(--secondary-color);
             margin-bottom: 1rem;
         }
-        
         .score {
             font-size: 2rem;
             font-weight: 700;
             margin: 1rem 0;
         }
-        
         .excellent {
             color: var(--success-color);
         }
-        
         .good {
             color: var(--primary-color);
         }
-        
         .average {
             color: var(--warning-color);
         }
-        
         .poor {
             color: var(--accent-color);
         }
-        
         .feedback {
             font-size: 1.1rem;
             margin-top: 1rem;
             line-height: 1.6;
         }
-        
         footer {
             text-align: center;
             margin-top: 3rem;
@@ -211,16 +185,13 @@
             font-size: 0.9rem;
             border-top: 1px solid #eee;
         }
-        
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
             }
-            
             h1 {
                 font-size: 1.8rem;
             }
-            
             .question {
                 padding: 1.2rem;
             }
@@ -234,7 +205,6 @@
             <p class="subtitle">Всего вопросов: 17 (15 основных + 2 дополнительных)</p>
         </div>
     </header>
-    
     <div class="container">
         <form id="quiz-form">
             <div class="question" id="q1">
@@ -244,7 +214,6 @@
                 <label><input type="radio" name="q1" value="c"> Каковы законы природы?</label>
                 <label><input type="radio" name="q1" value="d"> Что такое добро и зло?</label>
             </div>
-
             <div class="question" id="q2">
                 <div class="question-number">2. Какая философская школа рассматривает человека как самое непостижимое явление природы?</div>
                 <label><input type="radio" name="q2" value="a"> Экзистенциализм</label>
@@ -252,15 +221,13 @@
                 <label><input type="radio" name="q2" value="c"> Марксизм</label>
                 <label><input type="radio" name="q2" value="d"> Стоицизм</label>
             </div>
-
             <div class="question" id="q3">
                 <div class="question-number">3. Что утверждает классическая философия о человеке?</div>
                 <label><input type="radio" name="q3" value="a"> Разум является высшей характеристикой человека</label>
                 <label><input type="radio" name="q3" value="b"> Человек — это биологическое существо, подчиненное природе</label>
                 <label><input type="radio" name="q3" value="c"> Человек — это продукт социальных отношений</label>
                 <label><input type="radio" name="q3" value="d"> Человек — это воплощение божественного замысла</label>
-                </div>
-
+            </div>
             <div class="question" id="q4">
                 <div class="question-number">4. Неклассическая философия акцентирует внимание на:</div>
                 <label><input type="radio" name="q4" value="a"> Логике и рациональности</label>
@@ -268,7 +235,6 @@
                 <label><input type="radio" name="q4" value="c"> Абсолютных истинах</label>
                 <label><input type="radio" name="q4" value="d"> Технологическом прогрессе</label>
             </div>
-
             <div class="question" id="q5">
                 <div class="question-number">5. Кто из перечисленных философов разработал концепцию антропогенеза?</div>
                 <label><input type="radio" name="q5" value="a"> Аристотель</label>
@@ -276,7 +242,6 @@
                 <label><input type="radio" name="q5" value="c"> Рене Декарт</label>
                 <label><input type="radio" name="q5" value="d"> Иммануил Кант</label>
             </div>
-
             <div class="question" id="q6">
                 <div class="question-number">6. Согласно концепции М. Шелера, человек отличается от животных благодаря:</div>
                 <label><input type="radio" name="q6" value="a"> Способности к труду</label>
@@ -284,7 +249,6 @@
                 <label><input type="radio" name="q6" value="c"> Инстинктам выживания</label>
                 <label><input type="radio" name="q6" value="d"> Физической силе</label>
             </div>
-
             <div class="question" id="q7">
                 <div class="question-number">7. Теяр де Шарден связывает будущее человечества с:</div>
                 <label><input type="radio" name="q7" value="a"> Технологическим прогрессом</label>
@@ -292,7 +256,6 @@
                 <label><input type="radio" name="q7" value="c"> Экономическим развитием</label>
                 <label><input type="radio" name="q7" value="d"> Политической стабильностью</label>
             </div>
-
             <div class="question" id="q8">
                 <div class="question-number">8. Какую роль играет технологизированный мир в жизни человека?</div>
                 <label><input type="radio" name="q8" value="a"> Упрощает жизнь, но лишает смысла бытия</label>
@@ -300,7 +263,6 @@
                 <label><input type="radio" name="q8" value="c"> Уничтожает природу и культуру человека</label>
                 <label><input type="radio" name="q8" value="d"> Все вышеперечисленное верно в разных контекстах</label>
             </div>
-
             <div class="question" id="q9">
                 <div class="question-number">9. Что подразумевается под «будущим человеческого феномена»?</div>
                 <label><input type="radio" name="q9" value="a"> Полное исчезновение человечества из-за экологических кризисов</label>
@@ -308,73 +270,75 @@
                 <label><input type="radio" name="q9" value="c"> Замена человека искусственным интеллектом и роботами</label>
                 <label><input type="radio" name="q9" value="d"> Возвращение к традиционным ценностям прошлого</label>
             </div>
-
             <div class="question" id="q10">
                 <div class="question-number">10. Смысл человеческого бытия, согласно экзистенциалистам, заключается в:</div>
                 <label><input type="radio" name="q10" value="a"> Следовании моральным нормам общества</label>
-        <label><input type="radio" name="q10" value="b"> Самостоятельном поиске смысла жизни каждым человеком</label>
-        <label><input type="radio" name="q10" value="c"> Подчинении высшей сущности или богу</label>
-        <label><input type="radio" name="q10" value="d"> Научных открытиях и прогрессе цивилизации</label>
+                <label><input type="radio" name="q10" value="b"> Самостоятельном поиске смысла жизни каждым человеком</label>
+                <label><input type="radio" name="q10" value="c"> Подчинении высшей сущности или богу</label>
+                <label><input type="radio" name="q10" value="d"> Научных открытиях и прогрессе цивилизации</label>
+            </div>
+            <div class="question" id="q11">
+                <div class="question-number">11. Жизнь и смерть как феномены человеческого бытия рассматриваются в философии как:</div>
+                <label><input type="radio" name="q11" value="a"> Противоположности, не имеющие связи между собой</label>
+                <label><input type="radio" name="q11" value="b"> Взаимосвязанные аспекты существования человека</label>
+                <label><input type="radio" name="q11" value="c"> Исключительно биологические процессы</label>
+                <label><input type="radio" name="q11" value="d"> Абстрактные категории, не влияющие на повседневную жизнь</label>
+            </div>
+            <div class="question" id="q12">
+                <div class="question-number">12. Кто из перечисленных философов утверждал, что человек — это «недостающее звено природы»?</div>
+                <label><input type="radio" name="q12" value="a"> Арнольд Гелен</label>
+                <label><input type="radio" name="q12" value="b"> Николай Гартман</label>
+                <label><input type="radio" name="q12" value="c"> Макс Шелер</label>
+                <label><input type="radio" name="q12" value="d"> Теяр де Шарден</label>
+            </div>
+            <div class="question" id="q13">
+                <div class="question-number">13. В чем заключается отличие концепции антропогенеза А. Плеснера от других теорий?</div>
+                <label><input type="radio" name="q13" value="a"> В акценте на биологической эволюции человека</label>
+                <label><input type="radio" name="q13" value="b"> В рассмотрении человека как существа, способного к самоопределению</label>
+                <label><input type="radio" name="q13" value="c"> В отрицании роли культуры в развитии человека</label>
+                <label><input type="radio" name="q13" value="d"> В утверждении превосходства разума над эмоциями</label>
+            </div>
+            <div class="question" id="q14">
+                <div class="question-number">14. Как экзистенциальная философия объясняет феномен смерти?</div>
+                <label><input type="radio" name="q14" value="a"> Смерть — это конец существования без смысла</label>
+                <label><input type="radio" name="q14" value="b"> Смерть придает жизни смысл через осознание ее конечности</label>
+                <label><input type="radio" name="q14" value="c"> Смерть — это переход к высшему состоянию бытия</label>
+                <label><input type="radio" name="q14" value="d"> Смерть — это случайное событие без значения</label>
+            </div>
+            <div class="question" id="q15">
+                <div class="question-number">15. Какую роль играет разум в неклассической философии о человеке?</div>
+                <label><input type="radio" name="q15" value="a"> Разум является основным инструментом познания мира</label>
+                <label><input type="radio" name="q15" value="b"> Разум уступает место интуиции и переживанию жизни</label>
+                <label><input type="radio" name="q15" value="c"> Разум полностью отвергается как источник заблуждений</label>
+                <label><input type="radio" name="q15" value="d"> Разум используется для оправдания существования технологий</label>
+            </div>
+            <div class="question" id="q16">
+                <div class="question-number">16. Какую идею выдвигал Николай Гартман относительно человеческого бытия?</div>
+                <label><input type="radio" name="q16" value="a"> Человек — это существо, находящееся между природой и духом</label>
+                <label><input type="radio" name="q16" value="b"> Человек — это исключительно биологический организм</label>
+                <label><input type="radio" name="q16" value="c"> Человек — это воплощение абсолютной истины</label>
+                <label><input type="radio" name="q16" value="d"> Человек должен стремиться к технологическому совершенствованию</label>
+            </div>
+            <div class="question" id="q17">
+                <div class="question-number">17. Какую роль играет искусственный интеллект в будущем человеческого феномена?</div>
+                <label><input type="radio" name="q17" value="a"> Искусственный интеллект заменит человека во всех сферах жизни</label>
+                <label><input type="radio" name="q17" value="b"> Искусственный интеллект станет инструментом для расширения возможностей человека</label>
+                <label><input type="radio" name="q17" value="c"> Искусственный интеллект приведет к деградации человечества</label>
+                <label><input type="radio" name="q17" value="d"> Искусственный интеллект не имеет значения для антропологии</label>
+            </div>
+            <button type="button" onclick="checkAnswers()" class="btn">Проверить ответы</button>
+        </form>
+        <div id="result">
+            <div class="result-title">Результаты теста</div>
+            <div class="score"></div>
+            <div class="feedback"></div>
+        </div>
     </div>
-
-    <div class="question" id="q11">
-        <div class="question-number">11. Жизнь и смерть как феномены человеческого бытия рассматриваются в философии как:</div>
-        <label><input type="radio" name="q11" value="a"> Противоположности, не имеющие связи между собой</label>
-        <label><input type="radio" name="q11" value="b"> Взаимосвязанные аспекты существования человека</label>
-        <label><input type="radio" name="q11" value="c"> Исключительно биологические процессы</label>
-        <label><input type="radio" name="q11" value="d"> Абстрактные категории, не влияющие на повседневную жизнь</label>
-    </div>
-
-    <div class="question" id="q12">
-        <div class="question-number">12. Кто из перечисленных философов утверждал, что человек — это «недостающее звено природы»?</div>
-        <label><input type="radio" name="q12" value="a"> Арнольд Гелен</label>
-        <label><input type="radio" name="q12" value="b"> Николай Гартман</label>
-        <label><input type="radio" name="q12" value="c"> Макс Шелер</label>
-        <label><input type="radio" name="q12" value="d"> Теяр де Шарден</label>
-    </div>
-
-    <div class="question" id="q13">
-        <div class="question-number">13. В чем заключается отличие концепции антропогенеза А. Плеснера от других теорий?</div>
-        <label><input type="radio" name="q13" value="a"> В акценте на биологической эволюции человека</label>
-        <label><input type="radio" name="q13" value="b"> В рассмотрении человека как существа, способного к самоопределению</label>
-        <label><input type="radio" name="q13" value="c"> В отрицании роли культуры в развитии человека</label>
-        <label><input type="radio" name="q13" value="d"> В утверждении превосходства разума над эмоциями</label>
-    </div>
-
-    <div class="question" id="q14">
-        <div class="question-number">14. Как экзистенциальная философия объясняет феномен смерти?</div>
-        <label><input type="radio" name="q14" value="a"> Смерть — это конец существования без смысла</label>
-        <label><input type="radio" name="q14" value="b"> Смерть придает жизни смысл через осознание ее конечности</label>
-        <label><input type="radio" name="q14" value="c"> Смерть — это переход к высшему состоянию бытия</label>
-        <label><input type="radio" name="q14" value="d"> Смерть — это случайное событие без значения</label>
-    </div>
-
-    <div class="question" id="q15">
-        <div class="question-number">15. Какую роль играет разум в неклассической философии о человеке?</div>
-        <label><input type="radio" name="q15" value="a"> Разум является основным инструментом познания мира</label>
-        <label><input type="radio" name="q15" value="b"> Разум уступает место интуиции и переживанию жизни</label>
-        <label><input type="radio" name="q15" value="c"> Разум полностью отвергается как источник заблуждений</label>
-        <label><input type="radio" name="q15" value="d"> Разум используется для оправдания существования технологий</label>
-    </div>
-
-    <div class="question" id="q16">
-        <div class="question-number">16. Какую идею выдвигал Николай Гартман относительно человеческого бытия?</div>
-        <label><input type="radio" name="q16" value="a"> Человек — это существо, находящееся между природой и духом</label>
-        <label><input type="radio" name="q16" value="b"> Человек — это исключительно биологический организм</label>
-        <label><input type="radio" name="q16" value="c"> Человек — это воплощение абсолютной истины</label>
-        <label><input type="radio" name="q16" value="d"> Человек должен стремиться к технологическому совершенствованию</label>
-    </div>
-
-    <div class="question" id="q17">
-        <div class="question-number">17. Какую роль играет искусственный интеллект в будущем человеческого феномена?</div>
-        <label><input type="radio" name="q17" value="a"> Искусственный интеллект заменит человека во всех сферах жизни</label>
-        <label><input type="radio" name="q17" value="b"> Искусственный интеллект станет инструментом для расширения возможностей человека</label>
-        <label><input type="radio" name="q17" value="c"> Искусственный интеллект приведет к деградации человечества</label>
-        <label><input type="radio" name="q17" value="d"> Искусственный интеллект не имеет значения для антропологии</label>
-    </div>
-
-    <button onclick="checkAnswers()">Проверить ответы</button>
-
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Тест по антропологии</p>
+        </div>
+    </footer>
     <script>
         function checkAnswers() {
             const answers = {
@@ -396,61 +360,41 @@
                 q16: 'a',
                 q17: 'b'
             };
-            function checkAnswers() {
             let score = 0;
-            const totalQuestions = Object.keys(correctAnswers).length;
-            
-            for (const questionId in correctAnswers) {
-                const correctAnswer = correctAnswers[questionId];
-                const questionElement = document.getElementById(questionId);
-                
-                if (Array.isArray(correctAnswer)) {
-                    // Обработка вопросов с множественным выбором
-                    const selected = [];
-                    document.querySelectorAll(`#${questionId} input[type="checkbox"]:checked`).forEach(el => {
-                        selected.push(el.value);
-                    });
-                    
-                    if (JSON.stringify(selected.sort()) === JSON.stringify(correctAnswer.sort())) {
-                        score++;
-                        questionElement.style.borderLeft = "5px solid #27ae60";
-                    } else {
-                        questionElement.style.borderLeft = "5px solid #e74c3c";
-                    }
+            for (let key in answers) {
+                const selectedAnswer = document.querySelector(`input[name="${key}"]:checked`);
+                if (selectedAnswer && selectedAnswer.value === answers[key]) {
+                    score++;
+                    document.getElementById(key).style.borderLeft = "5px solid #27ae60"; // Зеленая граница для правильных ответов
                 } else {
-                    // Обработка вопросов с одиночным выбором
-                    const selected = document.querySelector(`#${questionId} input[name="${questionId}"]:checked`);
-                    
-                    if (selected && selected.value === correctAnswer) {
-                        score++;
-                        questionElement.style.borderLeft = "5px solid #27ae60";
-                    } else {
-                        questionElement.style.borderLeft = "5px solid #e74c3c";
-                    }
+                    document.getElementById(key).style.borderLeft = "5px solid #e74c3c"; // Красная граница для неправильных ответов
                 }
             }
-            
-            const resultElement = document.getElementById("result");
-            resultElement.style.display = "block";
-            resultElement.innerHTML = `
-                <div>Ваш результат: <span class="${score >= totalQuestions/2 ? 'correct' : 'incorrect'}">${score} из ${totalQuestions}</span></div>
-                <div>${getResultMessage(score, totalQuestions)}</div>
-            `;
-            
-            // Прокрутка к результатам
-            resultElement.scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        function getResultMessage(score, total) {
-            const percentage = (score / total) * 100;
-            
-            if (percentage >= 90) {
-                return "Отлично! Вы отлично разбираетесь в аксиологии!";
-            } else if (percentage >= 60) {
-                return "Хорошо! Есть небольшие пробелы, но вы близки к пониманию.";
+            const resultElement = document.getElementById('result');
+            const scoreElement = resultElement.querySelector('.score');
+            const feedbackElement = resultElement.querySelector('.feedback');
+
+            scoreElement.textContent = `${score} из 17`;
+
+            if (score >= 15) {
+                scoreElement.classList.add('excellent');
+                feedbackElement.textContent = "Отличная работа!";
+            } else if (score >= 10) {
+                scoreElement.classList.add('good');
+                feedbackElement.textContent = "Хорошая работа, но есть куда стремиться!";
+            } else if (score >= 5) {
+                scoreElement.classList.add('average');
+                feedbackElement.textContent = "Неплохо, но стоит постараться еще!";
             } else {
-                return "Рекомендуется повторить материал по аксиологии.";
+                scoreElement.classList.add('poor');
+                feedbackElement.textContent = "Необходимо больше практики!";
             }
+
+            resultElement.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
         }
     </script>
 </body>
